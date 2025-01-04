@@ -1,45 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import donation from '../assets/donation.png'
-import fitness from '../assets/fitness.png'
 import eco from '../assets/eco.png'
-import gadget from '../assets/gadget.png'
 import movie from '../assets/movie.png'
-import pat from '../assets/pat.png'
-import g3 from '../assets/g3-architects.png'
-import dream11 from '../assets/dream11.png'
 
 
-function Projects() {
+const Project = () => {
   const navigate = useNavigate();
   
   const projectData = [
-    {
-      "id": 1,
-      "title": "Peddy - Pet Adoption Platform",
-      "description": "Responsive platform for browsing and adopting pets across categories.",
-      "details": "Peddy features dynamic pet listings with details such as name, breed, age, gender, and price. It allows users to filter pets by categories, view detailed information in a modal, and adopt pets through a countdown confirmation modal. The platform sorts pets based on price and is designed to be fully responsive, providing a great experience across devices.",
-      "image": pat  // Add this line for the image
-    },
-    {
-      "id": 2,
-      "title": "Fitness - Health & Fitness Platform",
-      "description": "Health platform offering workout programs, BMI calculator, and fitness plans.",
-      "details": "The Fitness platform includes sections like workout programs, BMI calculator, habit formation tips, trainer profiles, and more. It offers various plans like Regular, Standard, and Premium, each designed to help users achieve fitness goals.",
-      "image": fitness
-    },
     {
       "id": 3,
       "title": "Donate for Various Causes in Bangladesh",
       "description": "Donate for flood victims, movements, and rebuilding lives in Bangladesh.",
       "details": "Donate now to support various causes in Bangladesh. Your contributions will provide crucial relief to those affected by disasters and movements.",
-      "image": donation
-    },
-    {
-      "id": 4,
-      "title": "G3 Architects - Professional Architectural Services",
-      "description": "Architectural firm providing innovative solutions for residential, commercial projects.",
-      "details": "The G3 Architects website includes a homepage, about section, and contact page with easy navigation.",
-      "image": g3
+      "image": donation 
     },
     {
       "id": 5,
@@ -49,38 +23,26 @@ function Projects() {
       "image": eco
     },
     {
-      "id": 6,
-      "title": "BPL Dream 11 Team Selector - Build Your Dream Cricket Team",
-      "description": "Build your dream cricket team within a limited coin budget.",
-      "details": "The BPL Dream 11 Team Selector allows users to build a team by selecting players within a coin-based budget.",
-      "image": dream11 
-    },
-    {
       "id": 7,
       "title": "Movieverse - Movie Portal",
       "description": "Explore, manage, and discover movies with CRUD operations and authentication.",
       "details": "Movieverse allows users to explore movies, view detailed information, and manage favorites with CRUD operations.",
       "image": movie
     },
-    {
-      "id": 8,
-      "title": "GadgetHeaven - E-Commerce Platform",
-      "description": "Browse and purchase gadgets with cart, wishlist, and dynamic listing.",
-      "details": "GadgetHeaven enables users to browse gadgets by categories or details, and manage their wishlist and cart with ease.",
-      "image": gadget
-    }
   ];
-  
-  
-  
+
   const handleDetailsClick = (id) => {
     navigate(`/projects/${id}`);
+  };
+
+  const handleShowAllProjects = () => {
+    navigate('/projects'); // Navigate to the projects page
   };
 
   return (
     <section className="bg-gray-800 py-10 px-5">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
+        <h2 className="text-3xl font-bold text-center text-white mb-8">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectData.map((project) => (
             <div
@@ -88,8 +50,8 @@ function Projects() {
               className="relative bg-white rounded-lg shadow-md overflow-hidden group"
             >
               {/* Card Image or Placeholder */}
-              <div className="h-48 bg-gray-300 ">
-                <img className="object-cover" src={project.image} alt="" />
+              <div className="h-48 bg-gray-300">
+                <img className="object-cover w-full h-full" src={project.image} alt={project.title} />
               </div>
 
               {/* Card Content */}
@@ -110,9 +72,19 @@ function Projects() {
             </div>
           ))}
         </div>
+
+        {/* Show All Projects Button */}
+        <div className="mt-8 text-center">
+          <button
+            className="bg-green-500 text-white px-6 py-2 rounded-lg text-lg font-medium"
+            onClick={handleShowAllProjects}
+          >
+            Show All Projects
+          </button>
+        </div>
       </div>
     </section>
   );
 }
 
-export default Projects;
+export default Project;

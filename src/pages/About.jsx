@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="bg-gray-800 text-white py-20 px-5"
+            className="bg-gray-800 text-white py-20 pt- px-5"
         >
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row  items-center justify-between">
                 {/* Image Section */}
@@ -14,7 +14,7 @@ const About = () => {
                     className="md:w-1/2 flex justify-center mb-8 md:mb-0"
                     whileInView={{ x: 0, opacity: 1 }}
                     initial={{ x: -100, opacity: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.7 }}
                 >
                     <img
                         src={about}
@@ -28,7 +28,7 @@ const About = () => {
                     className="md:w-1/2 space-y-6"
                     whileInView={{ x: 0, opacity: 1 }}
                     initial={{ x: 100, opacity: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.7 }}
                 >
                     <h2 className="text-4xl font-bold text-center md:text-left">
                         About Me

@@ -1,11 +1,11 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 text-white p-5">
+    <nav className="bg-gray-800 fixed top-0 left-0 w-full z-50 text-white p-5">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">

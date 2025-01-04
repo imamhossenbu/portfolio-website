@@ -29,7 +29,7 @@ const Skills = () => {
               whileHover={{ scale: 1.05 }}
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.1, delay: index * 0.2 }}
+              transition={{ duration: 0.4}}
             >
               {/* Icon */}
               {skill.icon}

@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 function AboutPage() {
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20 px-5">
+    <section className="bg-gradient-to-b from-gray-900 to-gray-800 text-white pb-20 pt-40 px-5">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Introductory Paragraph */}
         <motion.div
