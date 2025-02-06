@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+
 import { FaLinkedin, FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 import img from '../assets/img.jpg';
-import {ReactTyped} from 'react-typed';
+import { ReactTyped } from 'react-typed';
 
 function Banner() {
   return (
-    <section className="bg-gray-900 text-white py-20 px-5">
+    <section id='home' className="bg-gray-900 text-white py-20 px-5">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
         {/* Left Section: Text Content */}
         <div className="text-center md:text-left md:w-1/2 space-y-6">
@@ -25,18 +25,19 @@ function Banner() {
           </p>
           <div className="space-x-4">
             <a
-              href="/path-to-your-cv.pdf"
+              href="https://drive.google.com/uc?export=download&id=1loohmGIgekTe4gQT__yTUOc11XzbGkA6"
               download
-              className="bg-blue-500 hover:bg-blue-600 transition text-white px-6 py-3 rounded-lg text-lg font-medium"
+              target='_blank'
+              className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
             >
-              Download CV
+              Download Resume
             </a>
-            <Link
-              to="/projects"
+            <a
+              href="#projects"
               className="bg-gray-700 hover:bg-gray-800 transition text-white px-6 py-3 rounded-lg text-lg font-medium"
             >
               View Projects
-            </Link>
+            </a>
           </div>
 
           {/* Social Icons */}

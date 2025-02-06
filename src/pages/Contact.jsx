@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from 'react-toastify';
 
 const Contact = () => {
   const form = useRef();
@@ -9,21 +10,23 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    try {
-      const result = await emailjs.sendForm(
-        "service_pn3gwi3", // Replace with your EmailJS Service ID
-        "template_ysdluxs", // Replace with your EmailJS Template ID
+    emailjs
+      .sendForm(
+        "service_qw43pch", // Replace with your EmailJS Service ID
+        "template_imjva58", // Replace with your EmailJS Template ID
         form.current, // Reference to the form
-        "8gjdjgqWd_2T9xPZI" // Replace with your EmailJS Public Key
+        "xPMPQPzivNE4gngbY" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          toast.success("Message sent successfully!");
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          toast.error(`Error: ${error.text || "Something went wrong..."}`);
+        }
       );
-      console.log("Email sent:", result.text);
-      alert("Message sent successfully!");
-    } catch (error) {
-      console.error("Email sending failed:", error);
-      alert("Failed to send the message. Please check your configuration and try again.");
-    }
-
-    e.target.reset(); // Reset the form after submission
   };
 
   return (

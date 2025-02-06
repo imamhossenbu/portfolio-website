@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,56 +17,29 @@ function Navbar() {
 
         {/* Centered NavLinks */}
         <div className="hidden md:flex gap-6 items-center justify-center flex-1">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                : 'hover:text-blue-400'
-            }
-          >
+          <Link to="home"  className="cursor-pointer hover:text-blue-400">
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                : 'hover:text-blue-400'
-            }
-          >
+          </Link>
+          <Link to="about" smooth={true} duration={500} className="cursor-pointer hover:text-blue-400">
             About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                : 'hover:text-blue-400'
-            }
-          >
+          </Link>
+          <Link to="projects" smooth={true} duration={500} className="cursor-pointer hover:text-blue-400">
             Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                : 'hover:text-blue-400'
-            }
-          >
+          </Link>
+          <Link to="contact" smooth={true} duration={500} className="cursor-pointer hover:text-blue-400">
             Contact
-          </NavLink>
+          </Link>
         </div>
 
         {/* Download CV Button */}
         <div className="hidden md:block">
           <a
-            href="/path-to-your-cv.pdf"
+            href="https://drive.google.com/uc?export=download&id=1loohmGIgekTe4gQT__yTUOc11XzbGkA6"
             download
+            target='_blank'
             className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
           >
-            Download CV
+            Download Resume
           </a>
         </div>
 
@@ -81,56 +54,20 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} mt-4`}>
         <div className="flex flex-col items-center">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `py-2 px-4 text-lg w-full text-center ${
-                isActive
-                  ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                  : 'hover:bg-blue-500'
-              }`
-            }
-          >
+          <Link to="home"  className="py-2 px-4 text-lg w-full text-center cursor-pointer hover:bg-blue-500">
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `py-2 px-4 text-lg w-full text-center ${
-                isActive
-                  ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                  : 'hover:bg-blue-500'
-              }`
-            }
-          >
+          </Link>
+          <Link to="about" smooth={true} duration={500} className="py-2 px-4 text-lg w-full text-center cursor-pointer hover:bg-blue-500">
             About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              `py-2 px-4 text-lg w-full text-center ${
-                isActive
-                  ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                  : 'hover:bg-blue-500'
-              }`
-            }
-          >
+          </Link>
+          <Link to="projects" smooth={true} duration={500} className="py-2 px-4 text-lg w-full text-center cursor-pointer hover:bg-blue-500">
             Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `py-2 px-4 text-lg w-full text-center ${
-                isActive
-                  ? 'text-blue-400 font-semibold border-b-2 border-blue-400'
-                  : 'hover:bg-blue-500'
-              }`
-            }
-          >
+          </Link>
+          <Link to="contact" smooth={true} duration={500} className="py-2 px-4 text-lg w-full text-center cursor-pointer hover:bg-blue-500">
             Contact
-          </NavLink>
+          </Link>
           <a
-            href="/path-to-your-cv.pdf"
+            href="https://drive.google.com/file/d/1loohmGIgekTe4gQT__yTUOc11XzbGkA6/view?usp=sharing"
             download
             className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 mt-2 w-full text-center"
           >
