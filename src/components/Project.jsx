@@ -1,26 +1,26 @@
 import { useNavigate } from "react-router-dom";
-import donation from '../assets/donation.png'
-import eco from '../assets/eco.png'
+import peddy from '../assets/peddy.png'
+import honestView from '../assets/honestView.png'
 import movie from '../assets/movie.png'
 
 
 const Project = () => {
   const navigate = useNavigate();
-  
+
   const projectData = [
     {
-      "id": 3,
-      "title": "Donate for Various Causes in Bangladesh",
-      "description": "Donate for flood victims, movements, and rebuilding lives in Bangladesh.",
-      "details": "Donate now to support various causes in Bangladesh. Your contributions will provide crucial relief to those affected by disasters and movements.",
-      "image": donation 
+      "id": 9,
+      "title": "PeddyCare - Pet Adoption",
+      "description": "A web application that connects individuals with pets in need of loving homes, allowing users to browse, adopt, and support pet adoption campaigns effortlessly.",
+      "details": "The Pet Adoption Platform provides an intuitive interface for users to explore available pets, submit adoption requests, and contribute to donation campaigns. With user authentication, pet listing filters, and a responsive design, this platform ensures a seamless adoption experience.",
+      "image": peddy
     },
     {
-      "id": 5,
-      "title": "Eco-Adventure Experiences - Explore Eco-Friendly Adventures",
-      "description": "Explore eco-friendly travel adventures with user authentication and dynamic content.",
-      "details": "The Eco-Adventure Experiences website provides an immersive platform for users to explore various eco-adventure activities.",
-      "image": eco
+      "id": 10,
+      "title": "Service Review Application System",
+      "description": "A full-stack platform where users can browse services, post reviews, and manage their interactions efficiently.",
+      "details": "The Service Review Application System allows users to add, update, and delete services while providing a secure review management system. With features like authentication, service search, filtering, and dynamic UI enhancements, it ensures a seamless user experience.",
+      "image": honestView
     },
     {
       "id": 7,
@@ -40,7 +40,7 @@ const Project = () => {
   };
 
   return (
-    <section id="projects" className="bg-gray-800 py-10 px-5"> 
+    <section id="projects" className="bg-gray-800 py-10 px-5">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-white mb-8">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

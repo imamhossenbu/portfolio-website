@@ -7,11 +7,12 @@ import movie from '../assets/movie.png'
 import pat from '../assets/pat.png'
 import g3 from '../assets/g3-architects.png'
 import dream11 from '../assets/dream11.png'
-
+import honestView from '../assets/honestView.png'
+import peddy from '../assets/peddy.png'
 
 function Projects() {
   const navigate = useNavigate();
-  
+
   const projectData = [
     {
       "id": 1,
@@ -53,7 +54,7 @@ function Projects() {
       "title": "BPL Dream 11 Team Selector - Build Your Dream Cricket Team",
       "description": "Build your dream cricket team within a limited coin budget.",
       "details": "The BPL Dream 11 Team Selector allows users to build a team by selecting players within a coin-based budget.",
-      "image": dream11 
+      "image": dream11
     },
     {
       "id": 7,
@@ -68,11 +69,26 @@ function Projects() {
       "description": "Browse and purchase gadgets with cart, wishlist, and dynamic listing.",
       "details": "GadgetHeaven enables users to browse gadgets by categories or details, and manage their wishlist and cart with ease.",
       "image": gadget
+    },
+    {
+      "id": 9,
+      "title": "PeddyCare - Pet Adoption",
+      "description": "A web application that connects individuals with pets in need of loving homes, allowing users to browse, adopt, and support pet adoption campaigns effortlessly.",
+      "details": "The Pet Adoption Platform provides an intuitive interface for users to explore available pets, submit adoption requests, and contribute to donation campaigns. With user authentication, pet listing filters, and a responsive design, this platform ensures a seamless adoption experience.",
+      "image": peddy
+    },
+    {
+      "id": 10,
+      "title": "Service Review Application System",
+      "description": "A full-stack platform where users can browse services, post reviews, and manage their interactions efficiently.",
+      "details": "The Service Review Application System allows users to add, update, and delete services while providing a secure review management system. With features like authentication, service search, filtering, and dynamic UI enhancements, it ensures a seamless user experience.",
+      "image": honestView
     }
+
   ];
-  
-  
-  
+
+
+
   const handleDetailsClick = (id) => {
     navigate(`/projects/${id}`);
   };
